@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PingSieve</string>
+    <string name="developed_by">تم التطوير بواسطة fdarryl</string>
+    <string name="configs_label">التكوينات:</string>
+    <string name="all_label">الكل:</string>
+    <string name="good_label">جيد:</string>
+    <string name="bad_label">سيء:</string>
+    <string name="load_button">تحميل</string>
+    <string name="parsing_toast">تحليل...</string>
+    <string name="failed_parse_toast">فشل في التحليل</string>
+    <string name="checking_toast">التحقق... قد يستغرق 2-3 دقائق.</string>
+    <string name="turn_off_wifi_toast">أوقف تشغيل Wi-Fi</string>
+    <string name="checking_button">التحقق...</string>
+    <string name="check_button">تحقق</string>
+    <string name="valid_label">صالح:</string>
+    <string name="import_clipboard_button">استيراد إلى الحافظة</string>
+    <string name="copied_clipboard_toast">تم النسخ إلى الحافظة</string>
+    <string name="version">v0.1pre-alpha</string>
+</resources>

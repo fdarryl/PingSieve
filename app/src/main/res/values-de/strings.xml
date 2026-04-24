@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PingSieve</string>
+    <string name="developed_by">Entwickelt von fdarryl</string>
+    <string name="configs_label">Konfigurationen:</string>
+    <string name="all_label">Alle:</string>
+    <string name="good_label">Gut:</string>
+    <string name="bad_label">Schlecht:</string>
+    <string name="load_button">Laden</string>
+    <string name="parsing_toast">Parsen...</string>
+    <string name="failed_parse_toast">Fehler beim Parsen</string>
+    <string name="checking_toast">Überprüfen... Dies kann 2-3 Minuten dauern.</string>
+    <string name="turn_off_wifi_toast">Schalten Sie Wi-Fi aus</string>
+    <string name="checking_button">Überprüfen...</string>
+    <string name="check_button">Überprüfen</string>
+    <string name="valid_label">Gültig:</string>
+    <string name="import_clipboard_button">In Zwischenablage importieren</string>
+    <string name="copied_clipboard_toast">In Zwischenablage kopiert</string>
+    <string name="version">v0.1pre-alpha</string>
+</resources>

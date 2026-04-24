@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PingSieve</string>
+    <string name="developed_by">fdarryl tarafından geliştirildi</string>
+    <string name="configs_label">Yapılandırmalar:</string>
+    <string name="all_label">Hepsi:</string>
+    <string name="good_label">İyi:</string>
+    <string name="bad_label">Kötü:</string>
+    <string name="load_button">Yükle</string>
+    <string name="parsing_toast">Ayrıştırılıyor...</string>
+    <string name="failed_parse_toast">Ayrıştırma başarısız</string>
+    <string name="checking_toast">Kontrol ediliyor... 2-3 dakika sürebilir.</string>
+    <string name="turn_off_wifi_toast">Wi-Fi\'yi kapatın</string>
+    <string name="checking_button">Kontrol ediliyor...</string>
+    <string name="check_button">Kontrol Et</string>
+    <string name="valid_label">Geçerli:</string>
+    <string name="import_clipboard_button">Panoya aktar</string>
+    <string name="copied_clipboard_toast">Panoya kopyalandı</string>
+    <string name="version">v0.1pre-alpha</string>
+</resources>
