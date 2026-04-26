@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">Panoya aktar</string>
     <string name="copied_clipboard_toast">Panoya kopyalandı</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">Genel</string>
+    <string name="settings_thread_count">İş parçacığı sayısı</string>
+    <string name="settings_thread_count_summary">Eşzamanlı ping için iş parçacığı sayısı</string>
+    <string name="settings_timeout">Zaman aşımı (ms)</string>
+    <string name="settings_timeout_summary">Ping zaman aşımı milisaniye cinsinden</string>
+    <string name="settings_parsing_url">Ayrıştırma URL\'si</string>
+    <string name="settings_parsing_url_summary">Yapılandırmaları yüklemek için URL</string>
+    <string name="settings_app_version">Uygulama sürümü</string>
 </resources>

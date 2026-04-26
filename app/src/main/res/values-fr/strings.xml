@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">Importer dans le presse-papiers</string>
     <string name="copied_clipboard_toast">Copié dans le presse-papiers</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">Général</string>
+    <string name="settings_thread_count">Nombre de threads</string>
+    <string name="settings_thread_count_summary">Nombre de threads pour le ping simultané</string>
+    <string name="settings_timeout">Délai d\'attente (ms)</string>
+    <string name="settings_timeout_summary">Délai d\'attente du ping en millisecondes</string>
+    <string name="settings_parsing_url">URL d\'analyse</string>
+    <string name="settings_parsing_url_summary">URL pour charger les configurations</string>
+    <string name="settings_app_version">Version de l\'application</string>
 </resources>

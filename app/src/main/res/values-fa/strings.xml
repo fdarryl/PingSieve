@@ -13,7 +13,15 @@
     <string name="checking_button">بررسی...</string>
     <string name="check_button">بررسی</string>
     <string name="valid_label">معتبر:</string>
-    <string name="import_clipboard_button">وارد کردن به کلیپ بورد</string>
-    <string name="copied_clipboard_toast">به کلیپ بورد کپی شد</string>
+    <string name="import_clipboard_button">وارد کردن به کلیپ‌بورد</string>
+    <string name="copied_clipboard_toast">به کلیپ‌بورد کپی شد</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">عمومی</string>
+    <string name="settings_thread_count">تعداد رشته‌ها</string>
+    <string name="settings_thread_count_summary">تعداد رشته‌ها برای پینگ همزمان</string>
+    <string name="settings_timeout">زمان پایان (میلی‌ثانیه)</string>
+    <string name="settings_timeout_summary">زمان پایان پینگ به میلی‌ثانیه</string>
+    <string name="settings_parsing_url">URL تجزیه</string>
+    <string name="settings_parsing_url_summary">URL برای بارگذاری تنظیمات</string>
+    <string name="settings_app_version">نسخه برنامه</string>
 </resources>

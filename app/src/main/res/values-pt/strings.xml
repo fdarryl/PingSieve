@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">Importar para área de transferência</string>
     <string name="copied_clipboard_toast">Copiado para área de transferência</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">Geral</string>
+    <string name="settings_thread_count">Número de threads</string>
+    <string name="settings_thread_count_summary">Número de threads para ping simultâneo</string>
+    <string name="settings_timeout">Timeout (ms)</string>
+    <string name="settings_timeout_summary">Timeout do ping em milissegundos</string>
+    <string name="settings_parsing_url">URL de análise</string>
+    <string name="settings_parsing_url_summary">URL para carregar configurações</string>
+    <string name="settings_app_version">Versão do aplicativo</string>
 </resources>

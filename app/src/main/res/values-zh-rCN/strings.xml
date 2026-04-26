@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">导入到剪贴板</string>
     <string name="copied_clipboard_toast">已复制到剪贴板</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">通用</string>
+    <string name="settings_thread_count">线程数</string>
+    <string name="settings_thread_count_summary">并发 ping 的线程数</string>
+    <string name="settings_timeout">超时 (毫秒)</string>
+    <string name="settings_timeout_summary">ping 超时时间（毫秒）</string>
+    <string name="settings_parsing_url">解析 URL</string>
+    <string name="settings_parsing_url_summary">用于加载配置的 URL</string>
+    <string name="settings_app_version">应用版本</string>
 </resources>

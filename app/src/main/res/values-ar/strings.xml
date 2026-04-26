@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">استيراد إلى الحافظة</string>
     <string name="copied_clipboard_toast">تم النسخ إلى الحافظة</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">عام</string>
+    <string name="settings_thread_count">عدد الخيوط</string>
+    <string name="settings_thread_count_summary">عدد الخيوط للتنبيه المتزامن</string>
+    <string name="settings_timeout">المهلة الزمنية (مللي ثانية)</string>
+    <string name="settings_timeout_summary">مهلة التنبيه بالمللي ثانية</string>
+    <string name="settings_parsing_url">عنوان URL للتحليل</string>
+    <string name="settings_parsing_url_summary">عنوان URL لتحميل التكوينات</string>
+    <string name="settings_app_version">إصدار التطبيق</string>
 </resources>

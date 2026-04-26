@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">ייבא ללוח</string>
     <string name="copied_clipboard_toast">הועתק ללוח</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">כללי</string>
+    <string name="settings_thread_count">מספר תהליכונים</string>
+    <string name="settings_thread_count_summary">מספר תהליכונים לפינג בו זמנית</string>
+    <string name="settings_timeout">זמן קצוב (מילישניות)</string>
+    <string name="settings_timeout_summary">זמן קצוב לפינג במילישניות</string>
+    <string name="settings_parsing_url">כתובת URL לניתוח</string>
+    <string name="settings_parsing_url_summary">כתובת URL לטעינת תצורות</string>
+    <string name="settings_app_version">גרסת האפליקציה</string>
 </resources>

@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">In Zwischenablage importieren</string>
     <string name="copied_clipboard_toast">In Zwischenablage kopiert</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">Allgemein</string>
+    <string name="settings_thread_count">Thread-Anzahl</string>
+    <string name="settings_thread_count_summary">Anzahl der Threads für gleichzeitiges Pingen</string>
+    <string name="settings_timeout">Timeout (ms)</string>
+    <string name="settings_timeout_summary">Ping-Timeout in Millisekunden</string>
+    <string name="settings_parsing_url">Parsing-URL</string>
+    <string name="settings_parsing_url_summary">URL zum Laden von Konfigurationen</string>
+    <string name="settings_app_version">App-Version</string>
 </resources>

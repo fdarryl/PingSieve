@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">Import into clipboard</string>
     <string name="copied_clipboard_toast">Copied to clipboard</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">General</string>
+    <string name="settings_thread_count">Thread Count</string>
+    <string name="settings_thread_count_summary">Number of threads for concurrent pinging</string>
+    <string name="settings_timeout">Timeout (ms)</string>
+    <string name="settings_timeout_summary">Ping timeout in milliseconds</string>
+    <string name="settings_parsing_url">Parsing URL</string>
+    <string name="settings_parsing_url_summary">URL to fetch configurations from</string>
+    <string name="settings_app_version">App Version</string>
 </resources>

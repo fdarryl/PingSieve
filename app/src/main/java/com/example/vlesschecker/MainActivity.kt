@@ -81,7 +81,16 @@ fun MainScreen(modifier: Modifier = Modifier) {
     val coroutineScope = rememberCoroutineScope()
 
     val parser = remember { Parser() }
-    val networkService = remember { NetworkService() }
+    val settingsManager = remember { SettingsManager(context) }
+    var networkService by remember { mutableStateOf(NetworkService(4, 1500)) }
+
+    val threadCount by settingsManager.threadCountFlow.collectAsState(4)
+    val timeoutMs by settingsManager.timeoutMsFlow.collectAsState(1500)
+    val parsingUrl by settingsManager.parsingUrlFlow.collectAsState("https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_lite.txt")
+
+    LaunchedEffect(threadCount, timeoutMs) {
+        networkService = NetworkService(threadCount, timeoutMs)
+    }
 
     var loadedText by remember { mutableStateOf(TextFieldValue("")) }
     var bottomText by remember { mutableStateOf(TextFieldValue("")) }
@@ -133,7 +142,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
                     Toast.makeText(context, context.getString(R.string.parsing_toast), Toast.LENGTH_SHORT).show()
                     coroutineScope.launch(Dispatchers.IO) {
                         try {
-                            val url = URL("https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_lite.txt")
+                            val url = URL(parsingUrl)
                             val content = url.readText()
                             val lines = parser.parseLines(content)
                             loadedText = TextFieldValue(content)

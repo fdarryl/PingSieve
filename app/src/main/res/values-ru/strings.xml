@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">Импорт в буфер обмена</string>
     <string name="copied_clipboard_toast">Скопировано в буфер обмена</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">Общие</string>
+    <string name="settings_thread_count">Количество потоков</string>
+    <string name="settings_thread_count_summary">Количество потоков для одновременного пинга</string>
+    <string name="settings_timeout">Таймаут (мс)</string>
+    <string name="settings_timeout_summary">Таймаут пинга в миллисекундах</string>
+    <string name="settings_parsing_url">URL для парсинга</string>
+    <string name="settings_parsing_url_summary">URL для загрузки конфигураций</string>
+    <string name="settings_app_version">Версия приложения</string>
 </resources>

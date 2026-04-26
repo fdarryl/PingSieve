@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">Importar al portapapeles</string>
     <string name="copied_clipboard_toast">Copiado al portapapeles</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">General</string>
+    <string name="settings_thread_count">Número de hilos</string>
+    <string name="settings_thread_count_summary">Número de hilos para ping concurrente</string>
+    <string name="settings_timeout">Tiempo de espera (ms)</string>
+    <string name="settings_timeout_summary">Tiempo de espera de ping en milisegundos</string>
+    <string name="settings_parsing_url">URL de análisis</string>
+    <string name="settings_parsing_url_summary">URL para cargar configuraciones</string>
+    <string name="settings_app_version">Versión de la aplicación</string>
 </resources>

@@ -16,4 +16,12 @@
     <string name="import_clipboard_button">क्लिपबोर्ड में आयात करें</string>
     <string name="copied_clipboard_toast">क्लिपबोर्ड में कॉपी किया गया</string>
     <string name="version">v0.1pre-alpha</string>
+    <string name="settings_general">सामान्य</string>
+    <string name="settings_thread_count">थ्रेड संख्या</string>
+    <string name="settings_thread_count_summary">समवर्ती पिंग के लिए थ्रेड संख्या</string>
+    <string name="settings_timeout">टाइमआउट (मिलीसेकंड)</string>
+    <string name="settings_timeout_summary">मिलीसेकंड में पिंग टाइमआउट</string>
+    <string name="settings_parsing_url">पार्सिंग URL</string>
+    <string name="settings_parsing_url_summary">कॉन्फ़िगरेशन लोड करने के लिए URL</string>
+    <string name="settings_app_version">ऐप संस्करण</string>
 </resources>
