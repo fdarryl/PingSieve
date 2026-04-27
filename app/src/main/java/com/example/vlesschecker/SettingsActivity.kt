@@ -44,7 +44,7 @@ class SettingsActivity : ComponentActivity() {
                                 }
                             },
                             colors = TopAppBarDefaults.topAppBarColors(
-                                containerColor = Color(0xFF1976D2),
+                                containerColor = Color(0xFF06173A),
                                 titleContentColor = Color.White,
                                 navigationIconContentColor = Color.White
                             )

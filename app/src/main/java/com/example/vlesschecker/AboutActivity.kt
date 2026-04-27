@@ -1,5 +1,6 @@
 package com.example.vlesschecker
 
+import androidx.compose.ui.graphics.toArgb
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.ComponentActivity
@@ -46,10 +47,10 @@ class AboutActivity : ComponentActivity() {
         }
     }
 }
-
 @Composable
 fun AboutScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
+    val colorScheme = MaterialTheme.colorScheme
 
     val markdown = remember {
         context.resources.openRawResource(R.raw.readme)
@@ -60,10 +61,19 @@ fun AboutScreen(modifier: Modifier = Modifier) {
     AndroidView(
         modifier = modifier,
         factory = {
-            val textView = TextView(it)
+            val textView = TextView(it).apply {
+                setBackgroundColor(android.graphics.Color.TRANSPARENT)
+                movementMethod = android.text.method.LinkMovementMethod.getInstance()
+            }
+
             val markwon = Markwon.create(it)
             markwon.setMarkdown(textView, markdown)
+
             textView
+        },
+        update = { textView ->
+            textView.setTextColor(colorScheme.onBackground.toArgb())
+            textView.setLinkTextColor(colorScheme.primary.toArgb())
         }
     )
 }

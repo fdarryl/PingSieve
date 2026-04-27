@@ -2,7 +2,7 @@
 
 [![Kotlin](https://img.shields.io/badge/language-Kotlin-blue.svg)](https://kotlinlang.org/)
 [![Android](https://img.shields.io/badge/platform-Android%207.0%2B-green.svg)](https://developer.android.com/about/versions/nougat)
-[![Latest Release](https://img.shields.io/github/v/release/your-username/PingSiever?label=latest%20release)](https://github.com/fdarryl/PingSiever/releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/your-username/PingSiever?label=latest%20release)](https://github.com/fdarryl/PingSieve/releases/latest)
 
 ---
 
