@@ -87,9 +87,18 @@ fun MainScreen(modifier: Modifier = Modifier) {
     val threadCount by settingsManager.threadCountFlow.collectAsState(4)
     val timeoutMs by settingsManager.timeoutMsFlow.collectAsState(1500)
     val parsingUrl by settingsManager.parsingUrlFlow.collectAsState("https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_lite.txt")
+    val whitelistMonitoringEnabled by settingsManager.whitelistMonitoringEnabledFlow.collectAsState(false)
 
     LaunchedEffect(threadCount, timeoutMs) {
         networkService = NetworkService(threadCount, timeoutMs)
+    }
+
+    LaunchedEffect(whitelistMonitoringEnabled) {
+        if (whitelistMonitoringEnabled) {
+            WhitelistMonitorWorker.scheduleMonitoring(context)
+        } else {
+            WhitelistMonitorWorker.stopMonitoring(context)
+        }
     }
 
     var loadedText by remember { mutableStateOf(TextFieldValue("")) }

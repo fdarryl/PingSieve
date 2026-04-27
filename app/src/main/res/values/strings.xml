@@ -24,4 +24,7 @@
     <string name="settings_parsing_url">Parsing URL</string>
     <string name="settings_parsing_url_summary">URL to fetch configurations from</string>
     <string name="settings_app_version">App Version</string>
+    <string name="settings_whitelist_monitoring">Whitelist Monitoring</string>
+    <string name="settings_whitelist_monitoring_enabled">Enable Whitelist Monitoring</string>
+    <string name="settings_whitelist_monitoring_summary">Periodically monitor whitelist status</string>
 </resources>

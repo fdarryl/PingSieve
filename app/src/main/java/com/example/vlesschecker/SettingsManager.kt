@@ -3,6 +3,7 @@ package com.example.vlesschecker
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
@@ -17,11 +18,13 @@ class SettingsManager(private val context: Context) {
         private val THREAD_COUNT = intPreferencesKey("thread_count")
         private val TIMEOUT_MS = intPreferencesKey("timeout_ms")
         private val PARSING_URL = stringPreferencesKey("parsing_url")
+        private val WHITELIST_MONITORING_ENABLED = booleanPreferencesKey("whitelist_monitoring_enabled")
 
         private const val DEFAULT_THREAD_COUNT = 4
         private const val DEFAULT_TIMEOUT_MS = 1500
         private const val DEFAULT_PARSING_URL =
             "https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_lite.txt"
+        private const val DEFAULT_WHITELIST_MONITORING_ENABLED = false
     }
 
     val threadCountFlow: Flow<Int> = context.dataStore.data.map { preferences ->
@@ -34,6 +37,10 @@ class SettingsManager(private val context: Context) {
 
     val parsingUrlFlow: Flow<String> = context.dataStore.data.map { preferences ->
         preferences[PARSING_URL] ?: DEFAULT_PARSING_URL
+    }
+
+    val whitelistMonitoringEnabledFlow: Flow<Boolean> = context.dataStore.data.map { preferences ->
+        preferences[WHITELIST_MONITORING_ENABLED] ?: DEFAULT_WHITELIST_MONITORING_ENABLED
     }
 
     suspend fun setThreadCount(count: Int) {
@@ -51,6 +58,12 @@ class SettingsManager(private val context: Context) {
     suspend fun setParsingUrl(url: String) {
         context.dataStore.edit { preferences ->
             preferences[PARSING_URL] = url
+        }
+    }
+
+    suspend fun setWhitelistMonitoringEnabled(enabled: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[WHITELIST_MONITORING_ENABLED] = enabled
         }
     }
 }

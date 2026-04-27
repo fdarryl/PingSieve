@@ -24,4 +24,7 @@
     <string name="settings_parsing_url">URL для парсинга</string>
     <string name="settings_parsing_url_summary">URL для загрузки конфигураций</string>
     <string name="settings_app_version">Версия приложения</string>
+    <string name="settings_whitelist_monitoring">Мониторинг белого списка</string>
+    <string name="settings_whitelist_monitoring_enabled">Включить мониторинг белого списка</string>
+    <string name="settings_whitelist_monitoring_summary">Периодически проверять статус белого списка (проверяет vk.com, yandex.ru, github.com, google.com, max.ru)</string>
 </resources>

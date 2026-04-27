@@ -1,7 +1,9 @@
 package com.example.vlesschecker
 
+import android.R.attr.onClick
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -14,6 +16,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -68,10 +71,12 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
     val threadCount by settingsManager.threadCountFlow.collectAsState(4)
     val timeoutMs by settingsManager.timeoutMsFlow.collectAsState(1500)
     val parsingUrl by settingsManager.parsingUrlFlow.collectAsState("https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_lite.txt")
+    val whitelistMonitoringEnabled by settingsManager.whitelistMonitoringEnabledFlow.collectAsState(false)
 
     var threadCountInput by remember { mutableStateOf(threadCount.toString()) }
     var timeoutInput by remember { mutableStateOf(timeoutMs.toString()) }
     var urlInput by remember { mutableStateOf(parsingUrl) }
+    var whitelistMonitoringToggle by remember { mutableStateOf(whitelistMonitoringEnabled) }
 
     LaunchedEffect(threadCount) {
         threadCountInput = threadCount.toString()
@@ -83,6 +88,10 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
 
     LaunchedEffect(parsingUrl) {
         urlInput = parsingUrl
+    }
+
+    LaunchedEffect(whitelistMonitoringEnabled) {
+        whitelistMonitoringToggle = whitelistMonitoringEnabled
     }
 
     val versionName = try {
@@ -210,6 +219,57 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
                     subtitle = versionName
                 )
                 Spacer(modifier = Modifier.height(12.dp))
+                HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp), color = Color(0xFF3A3A3A))
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = stringResource(R.string.settings_whitelist_monitoring),
+            fontSize = 18.sp,
+            color = Color.White,
+            modifier = Modifier
+                .padding(16.dp)
+                .padding(top = 8.dp)
+        )
+
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp),
+            colors = CardDefaults.cardColors(containerColor = Color(0xFF1E1E1E))
+        ) {
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = stringResource(R.string.settings_whitelist_monitoring_enabled),
+                            fontSize = 16.sp,
+                            color = Color.White
+                        )
+                        Text(
+                            text = stringResource(R.string.settings_whitelist_monitoring_summary),
+                            fontSize = 12.sp,
+                            color = Color(0xFFB0B0B0)
+                        )
+                    }
+                    Switch(
+                        checked = whitelistMonitoringToggle,
+                        onCheckedChange = { newValue ->
+                            whitelistMonitoringToggle = newValue
+                            coroutineScope.launch {
+                                settingsManager.setWhitelistMonitoringEnabled(newValue)
+                            }
+                        }
+                    )
+                }
             }
         }
 
